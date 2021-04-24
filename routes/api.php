@@ -19,6 +19,6 @@ use App\Http\Controllers\UserController;
 Route::get('userAll', 'App\Http\Controllers\UsersController@getAllUsers');
 
 
-Route::middleware('auth:api')->get('/users', function (Request $request) {
+Route::middleware('auth:sanctum')->get('/users', function (Request $request) {
     return $request->users();
 });
